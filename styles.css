@@ -221,3 +221,38 @@ u {
 .main-nav a:hover{
   text-decoration:underline;
 }
+.image-gallery {
+  padding: 40px;
+  text-align: center;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  background-color: #fff8f0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 14px;
+}
