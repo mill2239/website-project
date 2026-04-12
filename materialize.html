@@ -157,6 +157,16 @@
         "Thanks for subscribing. We will send you updates about our " + selected + ".";
     }
   </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  M.Carousel.init(elems);
+
+  var col = document.querySelectorAll('.collapsible');
+  M.Collapsible.init(col);
+});
+</script>
 </body>
-</html>
+</html
