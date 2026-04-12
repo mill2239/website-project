@@ -3,80 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coastal Crumbs Bakery | Materialize</title>
+  <title>Coast Crumbs Bakery | Materialize</title>
 
-  <!-- Materialize CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <style>
     body {
-      background: linear-gradient(to bottom, #20d3e6, #7be3d8, #f7a8c8);
-      color: #2f2f2f;
-      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fffaf5;
+      font-family: Arial, sans-serif;
     }
 
     nav {
-      background-color: #d8a57c;
+      background-color: #c58b6d;
+      padding: 0 20px;
     }
 
     .brand-logo {
-      padding-left: 15px;
-      font-weight: bold;
+      font-size: 1.8rem;
     }
 
-    .hero-section {
-      padding: 40px 0;
+    .page-header {
+      text-align: center;
+      padding: 30px 20px 10px 20px;
     }
 
-    .hero-box {
-      background-color: #f8f1cf;
-      border: 3px solid #8fe7df;
-      padding: 25px;
-      border-radius: 12px;
+    .section-box {
+      padding: 20px;
     }
 
-    .section-title {
-      color: #1bc4cf;
-      font-weight: bold;
-      margin-bottom: 20px;
+    .carousel .carousel-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
     .custom-btn {
-      background-color: #f27a54;
+      background-color: #c58b6d;
     }
 
     .custom-btn:hover {
-      background-color: #e06743;
+      background-color: #a86f52;
     }
 
-    .card {
-      border-radius: 12px;
-      overflow: hidden;
+    .subscribe-box {
+      margin-top: 30px;
+      text-align: center;
+      padding-bottom: 40px;
     }
 
-    .card-image img {
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .circle-img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
+    .result-message {
       margin-top: 15px;
-    }
-
-    .info-section {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-
-    .page-footer {
-      background-color: #d8a57c;
-      margin-top: 40px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -84,120 +63,100 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">Coastal Crumbs</a>
-      <ul class="right hide-on-med-and-down">
+      <a href="index.html" class="brand-logo">Coast Crumbs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html">Menu</a></li>
         <li><a href="materialize.html">Materialize</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="container hero-section">
-    <div class="row valign-wrapper">
-      <div class="col s12 m6">
-        <div class="hero-box">
-          <h3 class="section-title">Welcome to Coastal Crumbs Bakery</h3>
-          <p>
-            This page uses Materialize CSS to create a bright and polished bakery website layout.
-            Coastal Crumbs Bakery is designed to feel cheerful, welcoming, and creative. Our bakery
-            offers cookies, cupcakes, brownies, muffins, coffee drinks, and custom desserts for events.
-            We want customers to feel excited by the design of the site and comfortable exploring our menu.
-          </p>
-          <a class="waves-effect waves-light btn custom-btn">
-            <i class="material-icons left">cake</i>View Our Treats
-          </a>
-        </div>
-      </div>
+  <div class="page-header">
+    <h2>Bakery Features</h2>
+    <p>Explore our treats with Materialize JavaScript features.</p>
+  </div>
 
-      <div class="col s12 m6">
-        <img src="images/bakery1.jpg" alt="Bakery treats display" class="responsive-img z-depth-3">
-      </div>
+  <div class="container section-box">
+    <h4 class="center-align">Bakery Carousel</h4>
+
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"><img src="cupcakes.jpeg" alt="Cupcakes"></a>
+      <a class="carousel-item" href="#two!"><img src="Gourmet-Muffins-1.jpg" alt="Muffins"></a>
+      <a class="carousel-item" href="#three!"><img src="coast crumbs bakery .png" alt="Bakery"></a>
     </div>
   </div>
 
-  <div class="container info-section">
-    <h4 class="section-title center-align">Customer Favorites</h4>
-    <div class="row">
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="images/bakery2.jpg" alt="Cupcakes and desserts">
-            <span class="card-title">Cupcakes</span>
-          </div>
-          <div class="card-content">
-            <p>
-              Our cupcakes are colorful, fresh, and perfect for birthdays, celebrations, or everyday treats.
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="container section-box">
+    <h4 class="center-align">Bakery FAQ</h4>
 
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="images/bakery3.jpg" alt="Custom cake display">
-            <span class="card-title">Custom Cakes</span>
-          </div>
-          <div class="card-content">
-            <p>
-              We create custom cakes for parties, showers, graduations, and other important events.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="images/bakery4.jpg" alt="Cookies and pastries">
-            <span class="card-title">Pastries</span>
-          </div>
-          <div class="card-content">
-            <p>
-              From cookies to muffins and brownies, our pastry selection gives customers plenty of choices.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">cake</i>What do you sell?</div>
+        <div class="collapsible-body"><span>We offer cupcakes, muffins, and custom bakery treats for every occasion.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">schedule</i>When are you open?</div>
+        <div class="collapsible-body"><span>We are open Monday through Saturday from 8 AM to 6 PM.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">favorite</i>Do you take custom orders?</div>
+        <div class="collapsible-body"><span>Yes, we create custom bakery orders for birthdays, parties, and events.</span></div>
+      </li>
+    </ul>
   </div>
 
-  <div class="container center-align info-section">
-    <h4 class="section-title">Bakery Style</h4>
-    <img src="images/bakery5.jpg" alt="Bakery team or bakery interior" class="circle responsive-img circle-img z-depth-2">
+  <div class="container subscribe-box">
+    <h4>Join Our Mailing List</h4>
+    <p>Choose your favorite treat and subscribe.</p>
+
     <p>
-      This circular image shows the Media section requirement and adds a fun visual element to the page.
+      <label>
+        <input name="favorite" type="radio" value="Cupcakes" checked>
+        <span>Cupcakes</span>
+      </label>
     </p>
+
+    <p>
+      <label>
+        <input name="favorite" type="radio" value="Muffins">
+        <span>Muffins</span>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input name="favorite" type="radio" value="Cookies">
+        <span>Cookies</span>
+      </label>
+    </p>
+
+    <button class="btn custom-btn" onclick="subscribeNow()">Subscribe</button>
+
+    <p id="subscribe-message" class="result-message"></p>
   </div>
 
-  <div class="container info-section">
-    <h4 class="section-title center-align">Watch a Baking Video</h4>
-    <div class="video-container z-depth-2">
-      <iframe width="853" height="480" src="https://www.youtube.com/embed/wA0Lh6LF5v0" title="Baking video" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <h5 class="white-text">Coastal Crumbs Bakery</h5>
-          <p class="grey-text text-lighten-4">
-            Fresh desserts, bright design, and custom treats for every occasion.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2026 Coastal Crumbs Bakery
-      </div>
-    </div>
-  </footer>
-
-  <!-- Materialize JavaScript CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousels = document.querySelectorAll('.carousel');
+      M.Carousel.init(carousels, {
+        fullWidth: false,
+        indicators: true
+      });
+
+      const collapsibles = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(collapsibles);
+    });
+
+    function subscribeNow() {
+      const selected = document.querySelector('input[name="favorite"]:checked').value;
+      document.getElementById("subscribe-message").textContent =
+        "Thanks for subscribing. We will send you updates about our " + selected + ".";
+    }
+  </script>
+
 </body>
 </html>
