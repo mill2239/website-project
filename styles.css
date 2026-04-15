@@ -256,3 +256,42 @@ u {
 .card p {
   font-size: 14px;
 }
+.jquery-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.hero img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.buttons-section {
+  margin: 30px 0;
+}
+
+.buttons-section button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7a9e9f;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.buttons-section button:hover {
+  background-color: #5f8586;
+}
+
+#special-info {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fdf4ec;
+  border-radius: 10px;
+}
