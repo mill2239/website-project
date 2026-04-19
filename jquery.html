@@ -3,63 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jQuery Page | Coastal Crumbs Bakery</title>
+  <title>Coastal Crumbs Bakery | jQuery Page</title>
   <link rel="stylesheet" href="styles.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    .jquery-hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .jquery-hero img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .interactive-section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .box {
+      width: 220px;
+      padding: 20px;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid #c89b6d;
+      background-color: #fff7f0;
+      border-radius: 10px;
+    }
+
+    .special {
+      background-color: #f7d9c4;
+      color: #5c3b28;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    button {
+      padding: 10px 18px;
+      margin: 8px;
+      border: none;
+      border-radius: 8px;
+      background-color: #c89b6d;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a9784c;
+    }
+
+    .coupon {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #fff0db;
+      border: 2px dashed #c89b6d;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .menu-list {
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+      line-height: 1.8;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>Coastal Crumbs Bakery</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="jquery.html">jQuery Page</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="materialize.html">Materialize</a>
+      <a href="jquery.html">jQuery</a>
     </nav>
   </header>
 
-  <main class="jquery-page">
-    <section class="hero">
-      <h2 id="main-title">Sweet Interactive Specials</h2>
-      <p id="intro-text">
-        Welcome to our jQuery page. Click the buttons below to explore featured bakery specials,
-        fun effects, and more about Coastal Crumbs Bakery.
-      </p>
-      <img id="bakery-image" src="images/bakery.jpg" alt="Coastal Crumbs Bakery treats">
-    </section>
-
-    <section class="buttons-section">
-      <button id="colorBtn">Change Title Color</button>
-      <button id="fadeBtn">Fade Treats Image</button>
-      <button id="slideBtn">Show Bakery Special</button>
-    </section>
-
-    <section id="special-info">
-      <h3>Bakery Special of the Week</h3>
+  <main>
+    <section class="jquery-hero">
+      <h2>Fresh Bakes and Fun Interactions</h2>
       <p>
-        This week we are featuring our sea salt chocolate chip cookies, fresh blueberry muffins,
-        and homemade cinnamon rolls. Every item is baked fresh and inspired by cozy coastal mornings.
+        Welcome to our jQuery page. At Coastal Crumbs Bakery, we believe your website
+        should feel just as warm and inviting as walking into the shop. This page shows
+        how interactive features can make a bakery website more fun and useful for visitors.
       </p>
+      <p>
+        Below, you can click buttons to reveal a coupon, highlight a featured treat, and
+        hide or show a bakery image. These simple tools make the page more engaging while
+        still keeping it easy to use for customers.
+      </p>
+      <img id="bakeryImage" src="images/bakery.jpg" alt="Bakery display">
     </section>
 
-    <section class="extra-content">
-      <h3>Why Customers Love Us</h3>
+    <section class="interactive-section">
+      <h2>Featured Bakery Menu</h2>
       <p>
-        At Coastal Crumbs Bakery, we focus on fresh ingredients, warm service, and homemade flavors.
-        Our bakery is designed to feel welcoming and cozy, and this page shows how interactive design
-        can make the online experience more engaging too.
+        Our bakery offers fresh pastries, custom cakes, cookies, and seasonal treats.
+        We focus on quality ingredients and a cozy coastal-inspired atmosphere that makes
+        every visit feel special.
       </p>
+
+      <div class="menu-list">
+        <ul>
+          <li>Chocolate Croissants</li>
+          <li>Blueberry Muffins</li>
+          <li>Custom Celebration Cakes</li>
+          <li>Sea Salt Chocolate Chip Cookies</li>
+          <li>Fresh Sourdough Bread</li>
+        </ul>
+      </div>
+
+      <div style="text-align:center;">
+        <button id="highlightBtn">Highlight Featured Treat</button>
+        <button id="showCouponBtn">Show Special Offer</button>
+        <button id="hideImgBtn">Hide Image</button>
+        <button id="showImgBtn">Show Image</button>
+      </div>
+
+      <div class="box" id="featureBox">
+        Today's Featured Treat
+      </div>
+
+      <div class="coupon" id="couponBox">
+        Sweet Deal: Get 15% off your next pastry order with code CRUMBS15
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Coastal Crumbs Bakery</p>
+    <p>Coastal Crumbs Bakery | Freshly baked every day</p>
   </footer>
 
-  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#highlightBtn").click(function() {
+        $("#featureBox").toggleClass("special").text("Blueberry Crumble Muffin");
+      });
+
+      $("#showCouponBtn").click(function() {
+        $("#couponBox").slideToggle();
+      });
+
+      $("#hideImgBtn").click(function() {
+        $("#bakeryImage").fadeOut();
+      });
+
+      $("#showImgBtn").click(function() {
+        $("#bakeryImage").fadeIn();
+      });
+    });
+  </script>
+
 </body>
 </html>
-<li><a href="jquery.html">jQuery Page</a></li>
-<img id="bakery-image" src="images/bakery.jpg" alt="Bakery treats">
