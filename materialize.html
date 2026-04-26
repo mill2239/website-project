@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coast Crumbs Bakery | Materialize</title>
+  <title>Coastal Crumbs Bakery | Materialize</title>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -19,13 +19,9 @@
       padding: 0 20px;
     }
 
-    .brand-logo {
-      font-size: 1.8rem;
-    }
-
     .page-header {
       text-align: center;
-      padding: 30px 20px 10px 20px;
+      padding: 30px;
     }
 
     .section-box {
@@ -38,53 +34,37 @@
       object-fit: cover;
       border-radius: 10px;
     }
-
-    .custom-btn {
-      background-color: #c58b6d;
-    }
-
-    .custom-btn:hover {
-      background-color: #a86f52;
-    }
-
-    .subscribe-box {
-      margin-top: 30px;
-      text-align: center;
-      padding-bottom: 40px;
-    }
-
-    .result-message {
-      margin-top: 15px;
-      font-weight: bold;
-    }
   </style>
 </head>
+
 <body>
 
   <nav>
     <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">Coast Crumbs</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="index.html" class="brand-logo">Coastal Crumbs</a>
+      <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Menu</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="materialize.html">Materialize</a></li>
+        <li><a href="jquery.html">jQuery</a></li>
+        <li><a href="bootstrap.html">Bootstrap</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="page-header">
-    <h2>Bakery Features</h2>
-    <p>Explore our treats with Materialize JavaScript features.</p>
+    <h2>Materialize Page</h2>
+    <p>This page uses Materialize components for bakery features.</p>
   </div>
 
   <div class="container section-box">
     <h4 class="center-align">Bakery Carousel</h4>
 
     <div class="carousel">
-      <a class="carousel-item" href="#one!"><img src="cupcakes.jpeg" alt="Cupcakes"></a>
-      <a class="carousel-item" href="#two!"><img src="Gourmet-Muffins-1.jpg" alt="Muffins"></a>
-      <a class="carousel-item" href="#three!"><img src="coast crumbs bakery .png" alt="Bakery"></a>
+      <a class="carousel-item" href="#one!"><img src="images/cupcakes.jpeg" alt="Cupcakes"></a>
+      <a class="carousel-item" href="#two!"><img src="images/Gourmet-Muffins-1.jpg" alt="Muffins"></a>
+      <a class="carousel-item" href="#three!"><img src="images/coast crumbs bakery .png" alt="Bakery"></a>
     </div>
   </div>
 
@@ -94,20 +74,22 @@
     <ul class="collapsible">
       <li>
         <div class="collapsible-header"><i class="material-icons">cake</i>What do you sell?</div>
-        <div class="collapsible-body"><span>We offer cupcakes, muffins, and custom bakery treats for every occasion.</span></div>
+        <div class="collapsible-body"><span>We sell cupcakes, muffins, cookies, and custom bakery treats.</span></div>
       </li>
+
       <li>
         <div class="collapsible-header"><i class="material-icons">schedule</i>When are you open?</div>
         <div class="collapsible-body"><span>We are open Monday through Saturday from 8 AM to 6 PM.</span></div>
       </li>
+
       <li>
         <div class="collapsible-header"><i class="material-icons">favorite</i>Do you take custom orders?</div>
-        <div class="collapsible-body"><span>Yes, we create custom bakery orders for birthdays, parties, and events.</span></div>
+        <div class="collapsible-body"><span>Yes, we take custom orders for birthdays, parties, and events.</span></div>
       </li>
     </ul>
   </div>
 
-  <div class="container subscribe-box">
+  <div class="container center-align section-box">
     <h4>Join Our Mailing List</h4>
     <p>Choose your favorite treat and subscribe.</p>
 
@@ -125,48 +107,27 @@
       </label>
     </p>
 
-    <p>
-      <label>
-        <input name="favorite" type="radio" value="Cookies">
-        <span>Cookies</span>
-      </label>
-    </p>
-
-    <button class="btn custom-btn" onclick="subscribeNow()">Subscribe</button>
-
-    <p id="subscribe-message" class="result-message"></p>
+    <button class="btn brown lighten-1" onclick="subscribeNow()">Subscribe</button>
+    <p id="subscribe-message"></p>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const carousels = document.querySelectorAll('.carousel');
-      M.Carousel.init(carousels, {
-        fullWidth: false,
-        indicators: true
-      });
+      var carousels = document.querySelectorAll('.carousel');
+      M.Carousel.init(carousels);
 
-      const collapsibles = document.querySelectorAll('.collapsible');
+      var collapsibles = document.querySelectorAll('.collapsible');
       M.Collapsible.init(collapsibles);
     });
 
     function subscribeNow() {
-      const selected = document.querySelector('input[name="favorite"]:checked').value;
+      var selected = document.querySelector('input[name="favorite"]:checked').value;
       document.getElementById("subscribe-message").textContent =
-        "Thanks for subscribing. We will send you updates about our " + selected + ".";
+        "Thanks for subscribing! We will send you updates about our " + selected + ".";
     }
   </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.carousel');
-  M.Carousel.init(elems);
-
-  var col = document.querySelectorAll('.collapsible');
-  M.Collapsible.init(col);
-});
-</script>
 </body>
-</html
+</html>
